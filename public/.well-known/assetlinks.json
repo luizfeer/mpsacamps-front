@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "br.com.feupam.twa",
+      "sha256_cert_fingerprints":
+        ["87:54:C4:73:84:F6:EC:22:E0:AD:6B:B3:FC:96:07:79:2B:E4:59:26:6F:EE:73:16:D8:CE:37:28:E8:31:89:BE"]
+    }
+  }
+]
