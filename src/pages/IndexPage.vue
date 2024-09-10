@@ -4,9 +4,12 @@
 <q-page class="px-4 md:mx-auto container z-10 font-poppins ">
 
     <Carousel :autoplay="10000" :wrap-around="true">
-        <Slide v-for="slide in 2" :key="slide">
-            <div class="carousel__item">
-                <div v-if="slide===1" class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left">
+        <Slide v-for="slide in 7" :key="slide">
+            <div class="carousel__item  bg-cover bg-center " v-if="slide===1" :style="{ backgroundImage: `url(${imagem1})`  }" >
+
+             <!-- <div
+                class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left  [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
+                >
                     <div class="md:-ml-2 xl:-ml-3">
                         <div class=" text-xl font-bold leading-none tracking-tighter text-white  transition-all">Segue a gente no </div>
                         <div class="-mt-[0.1em] translate-x-8 text-6xl font-bold leading-none tracking-tighter text-yellow-600">Insta</div>
@@ -21,9 +24,11 @@
                         </a>
                     </div>
 
-                </div>
-                <div v-else-if="slide===2">
-                  <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-10 lg:col-start-2 xl:col-span-6 xl:col-start-4">
+                </div> -->
+            </div>
+                <div v-else-if="slide===2" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem2})` }">
+                  <!-- <div class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left bg-cover bg-center [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
+                  >
                       <div class="px-6 text-center">
 
                         <div class="mb-1 flex flex-wrap justify-center gap-1 text-accent lg:mb-2 font-bold uppercase">
@@ -41,18 +46,23 @@
 
                         </a>
                       </div>
-                    </div>
+                    </div> -->
 
                 </div>
+                <div v-else-if="slide===3" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem3})` }"></div>
+                <div v-else-if="slide===4" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem4})` }"></div>
+                <div v-else-if="slide===5" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem5})` }"></div>
+                <div v-else-if="slide===6" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem6})` }"></div>
+                <div v-else-if="slide===7" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem7})` }"></div>
+                <div v-else-if="slide===8" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem8})` }"></div>
 
-            </div>
         </Slide>
 
         <template #addons>
             <Pagination />
         </template>
     </Carousel>
-    <div class="mx-auto max-w-[1360px] px-5 pb-20 md:pb-24 lg:pb-[150px] md:pt-24">
+    <div class="mx-auto max-w-[1360px] mt-16 md:px-5 pb-20 md:pb-24 lg:pb-[150px] md:pt-24">
         <div class="relative min-h-[220px] bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${countdownBg})` }">
             <div class="container relative z-10 text-white">
                 <div class="grid grid-cols-12 gap-x-5 gap-y-8 py-7 px-2 md:gap-x-6 lg:gap-y-12 lg:gap-x-7.5 lg:py-11 lg:px-0">
@@ -109,19 +119,19 @@
 
         <div class="grid grid-cols-12 gap-x-5 gap-y-12 md:gap-x-6 lg:gap-x-7.5">
 
-          <div class="col-span-full grid grid-cols-7 gap-x-5 sm:grid-rows-[197px_107px_85px] md:col-span-7 md:grid-rows-[152px_83px_66px] md:gap-x-6 lg:grid-rows-[197px_107px_85px] lg:gap-x-7.5 xl:grid-rows-[246px_134px_106px]">
+          <div class="hidden md:!grid col-span-full grid-cols-7 gap-x-5 sm:grid-rows-[197px_107px_85px] md:col-span-7 md:grid-rows-[152px_83px_66px] md:gap-x-6 lg:grid-rows-[197px_107px_85px] lg:gap-x-7.5 xl:grid-rows-[246px_134px_106px]">
             <figure class="col-span-full sm:row-start-1 sm:row-end-3">
               <img class="w-full sm:w-auto" src="~assets/imgs/hope.webp" alt="">
             </figure>
 
-            <figure class="relative col-span-full sm:col-span-5 sm:col-start-3 sm:row-start-2 sm:row-end-4 sm:pl-3 sm:pr-10">
-              <img class="w-full sm:w-auto sm:shadow-[0_0_60px_0_rgba(0,0,0,.4)]" src="~assets/imgs/umpi.webp" alt="">
+            <figure class="relative col-span-full sm:col-span-5 sm:col-start-3 sm:row-start-2 sm:row-end-4 sm:pl-3 sm:pr-10 ">
+              <img class="w-full md:mt-12 sm:w-auto sm:shadow-[0_0_60px_0_rgba(0,0,0,.4)] max-h-96" src="~assets/imgs/umpi.webp" alt="">
             </figure>
           </div>
 
           <div class="col-span-full md:col-span-5 font-poppins">
             <div class="md:-ml-[76px] lg:-ml-[100px] xl:-ml-[130px]">
-              <h2 class="mb-8 text-2xl font-bold tracking-tighter text-gray-900 dark:text-white sm:mb-9 sm:text-3xl md:-mt-[0.6em] md:mb-10 md:text-4xl md:leading-none lg:-mt-[0.6em] lg:mb-12 lg:text-5xl lg:leading-none xl:-mt-[0.7em] xl:mb-14 xl:text-[62px] xl:leading-none">
+              <h2 class="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] mb-8 text-2xl font-bold tracking-tighter text-gray-900 dark:text-white sm:mb-9 sm:text-3xl md:-mt-[0.6em] md:mb-10 md:text-4xl md:leading-none lg:-mt-[0.6em] lg:mb-12 lg:text-5xl lg:leading-none xl:-mt-[0.7em] xl:mb-14 xl:text-[62px] xl:leading-none">
                 <span class="inline-block md:block">Unidos para Servir:</span>
                 <span class="inline-block md:block xl:-mt-2 ml-1">
                   <span class="text-yellow-400">União</span> &amp;
@@ -131,7 +141,7 @@
 
             </div>
 
-            <div class="md:pl-4 md:pr-2 lg:px-7 xl:pr-[70px] xl:pl-10 [&amp;_p]:mb-8">
+            <div class="md:pl-4 md:pr-2 lg:px-7 text-xl xl:pr-[70px] xl:pl-10 [&amp;_p]:mb-8">
               <p>O MPS Acamps surge da união dos jovens da UMPI Areado com os jovens do HOPE Carmo. O desejo de servir ao Senhor não ficou apenas em nossas igrejas locais, tivemos a ideia de praticar isso em um evento capaz de unir todo o povo de Deus com o mesmo propósito. Como servos do Senhor engajamos no serviço à juventude da região, buscando alcançar adolescentes e jovens através da proclamação do Evangelho e das verdades eternas a respeito do nosso Deus, com fidelidade a Escritura Sagrada e com base na teologia reformada. Embora sejamos presbiterianos e pertencentes da Igreja Presbiteriana Independente do Brasil, somos gratos ao Senhor, pela oportunidade de caminhar com outras denominações irmãs que sempre apoiam, participam do nosso trabalho e contribuem para a nossa missão.</p>
             </div>
           </div>
@@ -139,7 +149,7 @@
         </div>
       </div>
       </section>
-      <div class="pb-20 md:pb-24 lg:pb-[120px] mt-11">
+      <div class="pb-20 md:pb-24 md:mt-32 lg:pb-[120px] mt-11">
       <div class="container">
         <div class="mb-10 md:mb-12 lg:mb-16 xl:mb-20">
           <h2 class="text-2.5xl font-bold tracking-tighter text-gray-900 before:text-accent before:content-['.'] dark:text-white sm:text-3.5xl md:text-4xl lg:text-[62px] lg:leading-none">
@@ -258,6 +268,15 @@ import {
 import CardsAnimadosVue from 'src/components/CardsAnimados.vue'
 import 'vue3-carousel/dist/carousel.css'
 import countdownBg from 'src/assets/countdown-bg.png'
+import imagem1 from 'src/assets/imgs/1.webp'
+import imagem2 from 'src/assets/imgs/2.webp'
+import imagem3 from 'src/assets/imgs/3.webp'
+import imagem4 from 'src/assets/imgs/4.webp'
+import imagem5 from 'src/assets/imgs/5.webp'
+import imagem6 from 'src/assets/imgs/6.webp'
+import imagem7 from 'src/assets/imgs/7.webp'
+import imagem8 from 'src/assets/imgs/8.webp'
+
 import NavBar from 'src/components/NavBar.vue'
 
 import FooterSite from 'src/components/FooterSite.vue'
@@ -312,6 +331,14 @@ export default defineComponent({
       hours,
       minutes,
       seconds,
+      imagem1,
+      imagem2,
+      imagem3,
+      imagem4,
+      imagem5,
+      imagem6,
+      imagem7,
+      imagem8,
 
       openInsta () {
         window.open('https://www.instagram.com/feupam/', '_blank')
@@ -330,10 +357,24 @@ export default defineComponent({
     background-color: var(--vc-clr-primary);
     color: white;
     font-size: 20px;
-    border-radius: 8px;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+@media screen and (min-width: 768px) {
+    .carousel__item {
+        min-height: 500px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .carousel__item {
+        min-height: 700px;
+    }
 
 }
 

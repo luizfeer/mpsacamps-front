@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container class="mb-24">
-      <navigation-bar v-if="quasar.platform.is.mobile" />
+      <navigation-bar v-if="quasar.platform.is.mobile && 0" />
 
       <modal-instagram />
       <router-view />

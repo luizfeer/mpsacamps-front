@@ -30,7 +30,7 @@
             <!-- Navigation (Desktop) / End -->
 
             <!-- Header Controls -->
-            <div class="flex ml-auto -mr-3 ">
+            <div class="flex hidden ml-auto -mr-3 ">
 
               <div class="relative group">
                 <a class="block py-4 px-2 xl:px-3" @click="loginWithGoogle">
@@ -219,7 +219,7 @@ export default {
       {
         id: '/#quemsomos',
         title: 'Quem somos'
-      },
+      }
       // {
       //   id: '/tutoria',
       //   title: 'Tutoria'
@@ -228,10 +228,10 @@ export default {
       //   id: 'https://api.whatsapp.com/send?phone=5535999819980&text=Ol%C3%A1%2C%20preciso%20de%20ajuda',
       //   title: 'Contato'
       // },
-      {
-        id: '/conferencia',
-        title: 'Acampamento'
-      }
+      // {
+      //   id: '/conferencia',
+      //   title: 'Acampamento'
+      // }
       // {
       //   id: 'federalíderes',
       //   title: 'Federalideres'

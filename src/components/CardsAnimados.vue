@@ -1,6 +1,6 @@
 <template>
 <section class="pt-4 pb-16 lg:pt-5 lg:pb-44">
-    <div class="mx-auto max-w-[1320px] bg-[#0d354e] p-4 md:pt-20 md:pb-28 lg:pt-24 lg:pb-32">
+    <div class="mx-auto max-w-[1320px] bg-[#0d354e] p-4 md:pt-20 md:pb-28 lg:pt-24 pb-4">
         <div class="container">
 
             <div>
@@ -24,31 +24,31 @@
                         </div>
                     </div>
 
-                    <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 md:py-[21px] px-7 lg:px-16 text-white ring-1 ring-inset ring-white bg-transparent hover:bg-white hover:text-gray-900 hover:ring-0">
+                    <!-- <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 md:py-[21px] px-7 lg:px-16 text-white ring-1 ring-inset ring-white bg-transparent hover:bg-white hover:text-gray-900 hover:ring-0">
                         <svg class="h-[14px] w-[14px]" fill="currentColor">
                             <use xlink:href="assets/img/social-icons.svg#twitter"></use>
                         </svg>
                         Follow Me!
 
-                    </a>
+                    </a> -->
                 </div>
                 <Carousel :breakpoints="breakpoints" v-bind="settings"  :wrap-around="true" class="gap-2">
                   <Slide class="text-white " v-for="(comment, index) in comments" :key="index">
-                    <div class="p-4  border-blue-950 border-2 rounded-lg  h-100">
+                    <div class="p-4   rounded-lg  h-100">
 
                     <div class="flex gap-x-4 mb-5 items-start robo text-left">
                         <figure class="overflow-hidden rounded-full shrink-0">
                             <img :src="comment.picture" class="h-14 w-auto" />
                         </figure>
-                        <div class="leading-tight font-bold">
+                        <div class="leading-tight font-bold text-left">
                             <div class="text-xl">{{ comment.nameUser }}</div>
                             <div>@{{ getUsername(comment.emailUser) }}</div>
                         </div>
                     </div>
-                    <div class=" leading-[26px] mb-5 text-md">
+                    <div class="text-left leading-[26px] mb-5 text-md">
                         {{ comment.comment }}
                     </div>
-                    <div class="text-sm">
+                    <div class="text-sm text-left">
                         <time :datetime="comment.createAt">{{ formataHorario(comment.createAt) }}</time>
                     </div>
                   </div>
@@ -67,7 +67,7 @@
         <div class="mt-10 flex flex-nowrap items-end">
             <EmojiPicker :native="true" :text="text" :key="render" picker-type="textarea" class="emoji-picker text-black" @update:text="onChangeText" theme="dark" :static-texts="{ skinTone: 'Cor', placeholder: 'Pesquisar' }" :group-names="grupoNomes" :additional-groups="{mycustomgroup : mycustomgroup}" @select="onSelectEmoji" @keyup.enter="sendComment" />
             <!-- button send with icon  -->
-            <q-btn class="w-8 ml-2 bg-slate-500 px-8 py-4 max-h-24 mb-2" flat icon="send" size="md" @click="sendComment" />
+            <q-btn class="w-8 ml-2 border-[#0d354e] border-2 px-8 py-4 max-h-24 mb-2" flat icon="send" size="md" @click="sendComment" />
             <div class="absolute top-0 left-0 w-full h-full" v-if="!userStorage?.user" @click.prevent="modalLogin=true"></div>
 
         </div>
@@ -217,7 +217,7 @@ export default {
 
       try {
         await api.post('/create-comments', comment)
-        comments.value.push(commentLocal)
+        comments.value.pop(commentLocal)
         $q.notify({
           color: 'positive',
           position: 'top',
@@ -240,7 +240,6 @@ export default {
       }
 
       onChangeText('')
-      render.value = render.value + 1
     }
 
     const onChangeText = (value) => {
@@ -330,12 +329,12 @@ export default {
 <style lang="scss">
 .emoji-picker .v3-emoji-picker-textarea {
 
-    color: black;
+    color: white;
     width: auto;
     padding-right: 40px;
-    background-color: #c4e4ff;
+    background-color: #0d354e;
     border-radius: 5px;
-    border: 1px solid #040041;
+    border: 2px solid white!important;
     padding: 10px;
     width: 100%;
     height: 50px;
@@ -348,5 +347,9 @@ export default {
 
 .v3-text {
     display: none;
+}
+.v3-input-picker-icon img {
+  //inverter colors
+  filter: invert(1);
 }
 </style>
