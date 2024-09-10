@@ -30,16 +30,23 @@
             <!-- Navigation (Desktop) / End -->
 
             <!-- Header Controls -->
-            <div class="flex hidden ml-auto -mr-3 ">
+            <div class="flex ml-auto -mr-3 ">
+              <div v-if="userStorage && !manutencao" class="m-4 relative flex-1 md:flex-none ">
+                <div class=" border-purple-700 border-2 rounded-full w-[53px]">
+                  <q-avatar size="50px" round @click="toggleUser = !toggleUser" class="cursor-pointer">
+                    <q-img :src="userStorage.user.photoURL" />
+                  </q-avatar>
+                </div>
+              </div>
 
-              <div class="relative group">
+              <div v-else class="relative group">
                 <a class="block py-4 px-2 xl:px-3" @click="loginWithGoogle">
                   <svg role="img" class="h-6 w-6 fill-gray-900 dark:fill-white">
                     <use href="~assets/sprite.svg#user"></use>
                   </svg>
                 </a>
 
-                <ul class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-40 origin-top-right flex-col dark:bg-gray-700 py-3 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
+                <ul v-if="0" class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-40 origin-top-right flex-col dark:bg-gray-700 py-3 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
                   <li class="px-5.5">
                     <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="_str1-account-info.html">
                       Personal Info
