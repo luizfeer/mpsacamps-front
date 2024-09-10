@@ -32,7 +32,7 @@
 
                     </a> -->
                 </div>
-                <Carousel :breakpoints="breakpoints" v-bind="settings"  :wrap-around="true" class="gap-2">
+                <Carousel :autoplay="5000" :breakpoints="breakpoints" v-bind="settings"  :wrap-around="true" class="gap-2">
                   <Slide class="text-white " v-for="(comment, index) in comments" :key="index">
                     <div class="p-4   rounded-lg  h-100">
 
