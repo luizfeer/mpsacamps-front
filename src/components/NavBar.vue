@@ -16,7 +16,7 @@
                 v-for="(nav, index) in navLinks"
                 :to="nav.id"
                 :key="nav.id"
-                class="font-poppins font-normal cursor-pointer group text-gray-900 dark:text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-left after:scale-x-100"
+                class="font-poppins font-normal cursor-pointer group text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-left after:scale-x-100"
                 :class="`
                     ${active === nav.title ? 'text-white' : 'text-dimWhite'}
                     ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}

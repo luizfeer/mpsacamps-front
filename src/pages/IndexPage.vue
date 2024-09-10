@@ -131,7 +131,7 @@
 
           <div class="col-span-full md:col-span-5 font-poppins">
             <div class="md:-ml-[76px] lg:-ml-[100px] xl:-ml-[130px]">
-              <h2 class="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] mb-8 text-2xl font-bold tracking-tighter text-gray-900 dark:text-white sm:mb-9 sm:text-3xl md:-mt-[0.6em] md:mb-10 md:text-4xl md:leading-none lg:-mt-[0.6em] lg:mb-12 lg:text-5xl lg:leading-none xl:-mt-[0.7em] xl:mb-14 xl:text-[62px] xl:leading-none">
+              <h2 class="[text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] mb-8 text-2xl font-bold tracking-tighter text-white sm:mb-9 sm:text-3xl md:-mt-[0.6em] md:mb-10 md:text-4xl md:leading-none lg:-mt-[0.6em] lg:mb-12 lg:text-5xl lg:leading-none xl:-mt-[0.7em] xl:mb-14 xl:text-[62px] xl:leading-none">
                 <span class="inline-block md:block">Unidos para Servir:</span>
                 <span class="inline-block md:block xl:-mt-2 ml-1">
                   <span class="text-yellow-400">União</span> &amp;
@@ -168,8 +168,8 @@
           </div>
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
-          <h4 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 lg:mb-2.5">
-            <a class="text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Início das inscrições - Lote inicial</a>
+          <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
+            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Início das inscrições - Lote inicial</a>
           </h4>
           <div class="lg:leading-[26px]">As inscrições para o MPS Acamps começam no dia 14 de abril.</div>
         </div>
@@ -185,8 +185,8 @@
         </div>
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
-          <h4 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 lg:mb-2.5">
-            <a class="text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Fim do lote de inscrições</a>
+          <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
+            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Fim do lote de inscrições</a>
           </h4>
           <div class="lg:leading-[26px]">O lote inicial de inscrições termina no dia 1º de outubro.</div>
         </div>
@@ -202,8 +202,8 @@
         </div>
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
-          <h4 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 lg:mb-2.5">
-            <a class="text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Check-in no Acampamento</a>
+          <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
+            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Check-in no Acampamento</a>
           </h4>
           <div class="lg:leading-[26px]">O check-in para o MPS Acamps começa às 17h do dia 14 de novembro.</div>
         </div>
@@ -219,8 +219,8 @@
         </div>
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
-          <h4 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 lg:mb-2.5">
-            <a class="text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Checkout no Acampamento</a>
+          <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
+            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Checkout no Acampamento</a>
           </h4>
           <div class="lg:leading-[26px]">O checkout do MPS Acamps começa às 9h do dia 17 de novembro.</div>
         </div>
@@ -236,8 +236,8 @@
         </div>
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
-          <h4 class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-2 lg:mb-2.5">
-            <a class="text-gray-900 dark:text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Pós Acampa</a>
+          <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
+            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Pós Acampa</a>
           </h4>
           <div class="lg:leading-[26px]">A data e o local do pós acampa ainda serão confirmados.</div>
         </div>
