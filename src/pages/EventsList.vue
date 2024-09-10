@@ -12,7 +12,7 @@
         <div class="z-30 my-28 font-poppins flex justify-center gap-10 flex-wrap">
           <router-link to="/inscricao/dia1" class="carda">
           <q-card class="my-card hover:brightness-150 p-5  bg-slate-600 bg-opacity-10 rounded-xl flex flex-col items-center">
-            <q-img src="~assets/federa/1.webp" class="rounded-lg w-full" />
+            <!-- <q-img src="~assets/federa/1.webp" class="rounded-lg w-full" /> -->
              <q-card-section class="min-h-[300px]">
                <h2 class="font-bold text-lg">Quinta - 30/05</h2>
                 <p>08:00 - Horario de chegada - Café da Manhã</p>
@@ -34,7 +34,7 @@
           </router-link>
           <router-link to="/inscricao/dia2" class="carda" >
           <q-card class="my-card hover:brightness-150 p-5  bg-slate-600 bg-opacity-10 rounded-xl flex flex-col items-center">
-            <q-img src="~assets/federa/3.webp" class="rounded-lg w-full" />
+            <!-- <q-img src="~assets/federa/3.webp" class="rounded-lg w-full" /> -->
               <q-card-section class="min-h-[300px]">
                 <h2 class="font-bold text-lg">Sexta - 31/05</h2>
                 <p>08:00 - Horario de chegada - Café da Manhã</p>
@@ -57,7 +57,7 @@
           </router-link>
           <router-link to="/inscricao/dia3" class="carda" >
             <q-card class="my-card hover:brightness-150 p-5  bg-slate-600 bg-opacity-10 rounded-xl flex flex-col items-center">
-              <q-img src="~assets/federa/2.webp" class="rounded-lg w-full" />
+              <!-- <q-img src="~assets/federa/2.webp" class="rounded-lg w-full" /> -->
               <q-card-section class="min-h-[300px]">
                 <h2 class="font-bold text-lg">Sábado - 01/06</h2>
                 <p>08:00 - Horario de chegada - Café da Manhã</p>

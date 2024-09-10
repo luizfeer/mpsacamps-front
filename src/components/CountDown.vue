@@ -2,7 +2,7 @@
 <div class="q-pa-md">
 
     <div class="row justify-center">
-    <q-img src="~assets/federa/federa-site.webp" class=" mx-4 video img-bg z-[10] rounded-lg mb-8 z-10" />
+    <!-- <q-img src="~assets/federa/federa-site.webp" class=" mx-4 video img-bg z-[10] rounded-lg mb-8 z-10" /> -->
 
         <div class="col-auto  -mt-20 z-20">
             <q-card flat bordered class="rounded-2xl">

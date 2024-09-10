@@ -9,7 +9,7 @@
         Por favor, acesse nosso site pelo navegador do celular.
         Para fazer isso clique nos 3 pontinhos no canto superior direito e clique em "Abrir no navegador".
         Ou acesse o site pelo Safari ou Chrome, instalados em seu celular.
-        <q-img src="~assets/gif.gif" height="500px" />
+        <!-- <q-img src="~assets/gif.gif" height="500px" /> -->
       </q-card-section>
 
     </q-card>

@@ -36,7 +36,7 @@
             <q-item clickable v-else v-for="item in charges" :key="item.event_desc.chargeId" @click="openModal(item)" >
               <q-item-section avatar>
 
-                  <q-img src="~assets/federa/federa-site.webp" />
+                  <!-- <q-img src="~assets/federa/federa-site.webp" /> -->
 
               </q-item-section>
               <q-item-section>

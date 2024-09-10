@@ -7,10 +7,10 @@
 <div class="relative lx:px-32 min-h-[50vh] lg:min-h-[70vh] ">
     <!-- <SvgIcon name="TopWave" class="z-[99] top-0 right-[-10rem] absolute" /> -->
     <!-- <div class="overlay z-[50]"> </div> -->
-    <q-img src="~assets/bg-federa.png" class="video img-bg z-[10]" />
+    <!-- <q-img src="~assets/bg-federa.png" class="video img-bg z-[10]" /> -->
 
     <!-- <video v-if="!isMobile" class="video z-[20]" src="https://drive.google.com/uc?id=1_OuKognzhtFNzdBKBgJE43T2pquMA5yz&export=download" autoplay loop muted></video> -->
-    <q-img src="~assets/font-federa.png" class="floating z-[60] mt-32 md:mt-20 " />
+    <!-- <q-img src="~assets/font-federa.png" class="floating z-[60] mt-32 md:mt-20 " /> -->
 
     <!-- <iframe class="video" width="100%" height="100vh" src="https://www.youtube.com/embed/VNVK9BloUx0?playlist=VNVK9BloUx0&loop=1&controls=0&autoplay=1&mute=1"> </iframe> -->
 </div>

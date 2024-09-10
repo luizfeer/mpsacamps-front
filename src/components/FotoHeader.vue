@@ -7,7 +7,7 @@
 <div class="relative lx:px-32 min-h-[200px] lg:min-h-[300px] mt-[108px]">
     <!-- <SvgIcon name="TopWave" class="z-[99] top-0 right-[-10rem] absolute" /> -->
     <!-- <div class="overlay z-[50]"> </div> -->
-    <q-img src="~assets/banner-conf.webp" class="video img-bg z-[10] blur-lg" />
+    <!-- <q-img src="~assets/banner-conf.webp" class="video img-bg z-[10] blur-lg" /> -->
 
     <!-- <iframe class="video" width="100%" height="100vh" src="https://www.youtube.com/embed/VNVK9BloUx0?playlist=VNVK9BloUx0&loop=1&controls=0&autoplay=1&mute=1"> </iframe> -->
 </div>

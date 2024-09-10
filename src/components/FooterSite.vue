@@ -1,7 +1,8 @@
 <template>
 <section class="flex justify-center items-center sm:py-16 py-6 flex-col">
     <div class="flex justify-center items-start md:flex-row flex-col mb-8 w-full">
-        <div class="hidden md:flex flex-[1] flex-col justify-start mr-10"><img src="~assets/FEUPAM.png" alt="hoobank" class="w-[266px] h-[72.14px] object-contain">
+        <div class="hidden md:flex flex-[1] flex-col justify-start mr-10">
+            <!-- <img src="~assets/FEUPAM.png" alt="hoobank" class="w-[266px] h-[72.14px] object-contain"> -->
             <p class="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] mt-4 max-w-[312px]">União Presbiteriana de Adolescentes e Mocidades do Presbitério Vale do Rio Grande (FEUPAM).</p>
         </div>
         <div class="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">

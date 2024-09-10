@@ -24,11 +24,11 @@
             </h1>
             <div class="row gap-5 mt-2 justify-around p-5">
                 <div class="col-12 col-md-5">
-                    <q-img src="~assets/federa/andrea.webp" class="w-full" />
+                    <!-- <q-img src="~assets/federa/andrea.webp" class="w-full" /> -->
                 </div>
                 <div class="col-12 col-md-5">
 
-                    <q-img src="~assets/federa/lucas.webp" class="w-full" />
+                    <!-- <q-img src="~assets/federa/lucas.webp" class="w-full" /> -->
                 </div>
 
             </div>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                <q-img src="~assets/federa/fliperamastudio.webp" class="col-12 col-sm-6 mt-9 sm:mt-0 opacity-75" />
+                <!-- <q-img src="~assets/federa/fliperamastudio.webp" class="col-12 col-sm-6 mt-9 sm:mt-0 opacity-75" /> -->
 
             </div>
            <div class="w-full bg-gray-900 bg-opacity-30 border-2 border-[#13003052] shadow-lg rounded-lg p-4 md:p-10 mt-24">

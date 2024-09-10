@@ -1,7 +1,7 @@
 <template>
  <div id="inscricoes" class="z-[100] relative flex justify-between flex-col p-5 lg:p-10 rounded-[20px] my-5 card-black mx-5 relative block ">
     <div class="row px-5 md:px-0">
-      <q-img src="~assets/banner-conf.webp" class=" mx-4 video img-bg z-[10] rounded-lg mb-8" />
+      <!-- <q-img src="~assets/banner-conf.webp" class=" mx-4 video img-bg z-[10] rounded-lg mb-8" /> -->
 
         <div class="col-md-10 col-12 pr-0 ">
 

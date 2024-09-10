@@ -84,7 +84,7 @@
           </nav>
 <nav v-if="0" class="flex navbar text-h6 w-full text-weight-bold">
     <router-link to="/" class="navbar-brand">
-      <q-img src="~assets/FEUPAM.png" class="w-16 m-2" />
+      <!-- <q-img src="~assets/FEUPAM.png" class="w-16 m-2" /> -->
     </router-link>
 
     <div class="list-none hidden-flex justify-center items-center flex-1">
