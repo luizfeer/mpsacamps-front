@@ -290,10 +290,6 @@ export default {
     }
 
     const breakpoints = {
-      400: {
-        itemsToShow: 2,
-        snapAlign: 'center'
-      },
       500: {
         itemsToShow: 3,
         snapAlign: 'center'
