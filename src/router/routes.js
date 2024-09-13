@@ -18,22 +18,14 @@ const routes = [
   //     { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
   //   ]
   // },
-  {
-    path: '/federa',
-    name: 'federa',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/FederaAcamps.vue') }
-    ]
-  },
-  {
-    path: '/federa-diarias',
-    name: 'federa',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/EventsList.vue') }
-    ]
-  },
+  // {
+  //   path: '/federa-diarias',
+  //   name: 'federa',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/EventsList.vue') }
+  //   ]
+  // },
   // {
   //   path: '/tutoria',
   //   name: 'tutoria',
@@ -43,11 +35,11 @@ const routes = [
   //   ]
   // },
   {
-    path: '/conferencia',
-    name: 'conferencia',
+    path: '/acamps',
+    name: 'acamps',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
+      { path: '', component: () => import('pages/MPSAcamps.vue') }
     ]
   },
   {
@@ -77,6 +69,7 @@ const routes = [
       requiresAuth: true
     }
   },
+
   // {
   //   path: '/eventos-disponiveis',
   //   name: 'eventos-disponiveis',

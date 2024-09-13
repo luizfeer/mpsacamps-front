@@ -68,7 +68,7 @@
             <EmojiPicker :native="true" :text="text" :key="render" picker-type="textarea" class="emoji-picker text-black" @update:text="onChangeText" theme="dark" :static-texts="{ skinTone: 'Cor', placeholder: 'Pesquisar' }" :group-names="grupoNomes" :additional-groups="{mycustomgroup : mycustomgroup}" @select="onSelectEmoji" @keyup.enter="sendComment" />
             <!-- button send with icon  -->
             <q-btn class="w-8 ml-2 border-[#0d354e] border-2 px-8 py-4 max-h-24 mb-2" flat icon="send" size="md" @click="sendComment" />
-            <div class="absolute top-0 left-0 w-full h-full" v-if="!userStorage?.user" @click.prevent="modalLogin=true"></div>
+            <!--<div class="absolute top-0 left-0 w-full h-full" v-if="!userStorage?.user" @click.prevent="modalLogin=true"></div> -->
 
         </div>
     </div>
@@ -188,7 +188,12 @@ export default {
         .then((response) => {
           if (response.data) {
             console.log(response.data)
-            comments.value.push(...response.data)
+            const coments = response.data
+            // order coments by date
+            coments.sort((a, b) => {
+              return new Date(b.createAt) - new Date(a.createAt)
+            })
+            comments.value.push(...coments)
           }
         })
         .catch((err) => {
@@ -197,6 +202,15 @@ export default {
     }
 
     const sendComment = async () => {
+      if (!userStorage.value.user) {
+        $q.notify({
+          color: 'negative',
+          position: 'top',
+          message: 'Faça login para comentar!',
+          icon: 'report_problem'
+        })
+        return
+      }
       if (text.value === '') {
         $q.notify({
           color: 'negative',
