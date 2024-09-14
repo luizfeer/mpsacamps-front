@@ -124,8 +124,8 @@ export default {
       title: 'Contato'
     },
     {
-      id: 'federa',
-      title: 'Federacamps'
+      id: '/acamps',
+      title: 'Acamps'
     }
       // {
       //   id: 'federalíderes',
