@@ -30,12 +30,30 @@
             <!-- Navigation (Desktop) / End -->
 
             <!-- Header Controls -->
-            <div class="flex ml-auto -mr-3 ">
+            <div class="flex ml-auto -mr-3 relative group">
               <div v-if="userStorage && !manutencao" class="m-4 relative flex-1 md:flex-none ">
                 <div class=" border-purple-700 border-2 rounded-full w-[53px]">
                   <q-avatar size="50px" round @click="toggleUser = !toggleUser" class="cursor-pointer">
                     <q-img :src="userStorage.user.photoURL" />
                   </q-avatar>
+                </div>
+                <div class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-48 origin-top-right flex-col dark:bg-blue-900 p-3 rounded-md bg-opacity-20 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
+                  <router-link to="/profile" class="font-poppins font-medium cursor-pointer text-[16px] text-white mb-4">
+                  <q-icon name="person" class="mr-2" />
+                   {{ userStorage?.user?.displayName }}
+                  </router-link>
+                  <!-- <div class="font-poppins font-medium cursor-pointer text-[16px] text-white mb-4">
+                    Editar perfil
+                  </div> -->
+                  <router-link to="/eventos" class="font-poppins font-medium cursor-pointer text-[16px] text-white mb-4">
+                    <q-icon name="event_note" class="mr-2" />
+                    Minhas inscrições
+                  </router-link>
+
+                  <div @click="logout" class="font-poppins font-medium cursor-pointer text-[16px] text-white mb-4">
+                    <q-icon name="logout" class="mr-2" />
+                    Sair
+                  </div>
                 </div>
               </div>
 
@@ -45,34 +63,6 @@
                     <use href="~assets/sprite.svg#user"></use>
                   </svg>
                 </a>
-
-                <ul v-if="0" class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-40 origin-top-right flex-col dark:bg-gray-700 py-3 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
-                  <li class="px-5.5">
-                    <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="_str1-account-info.html">
-                      Personal Info
-                    </a>
-                  </li>
-                  <li class="px-5.5">
-                    <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="_str1-account-billing.html">
-                      Billing Details
-                    </a>
-                  </li>
-                  <li class="px-5.5">
-                    <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="_str1-account-shipping.html">
-                      Shipping Details
-                    </a>
-                  </li>
-                  <li class="px-5.5">
-                    <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="_str1-account-orders.html">
-                      Orders
-                    </a>
-                  </li>
-                  <li class="px-5.5">
-                    <a class="flex flex-row-reverse items-center justify-between py-1.5 text-white transition-colors hover:text-accent dark:hover:text-accent" href="#.html">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
 
               </div>
 
