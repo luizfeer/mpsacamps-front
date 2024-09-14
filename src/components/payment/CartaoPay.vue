@@ -260,7 +260,14 @@ export default {
       try {
         const { data } = await api.post('/pagarme', form.value)
         console.log(data)
-        if (data.status) {
+        if (data.json.status === 'failed') {
+          $q.notify({
+            message: 'Erro: ' + data.json.payLink,
+            color: 'negative',
+            position: 'top',
+            timeout: 2000
+          })
+        } else {
           creditCard.value = data
           emit('success', data)
         }

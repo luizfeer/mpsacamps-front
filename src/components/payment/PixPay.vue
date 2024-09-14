@@ -118,9 +118,9 @@ export default {
       api.post('/pagarme', form.value)
         .then((response) => {
           console.log(response)
-          if (response.data.status) {
+          if (response.data) {
             success.value = true
-            pix.value = response.data
+            pix.value = response.data.json
           }
         })
         .catch(async (error) => {
