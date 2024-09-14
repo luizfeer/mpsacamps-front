@@ -30,7 +30,7 @@
             </q-item>
             <q-item clickable v-else-if="charges && charges.length === 0" >
               <q-item-section>
-                <q-item-label>Você ainda não fez nenhuma inscrição</q-item-label>
+                <q-item-label>VocÊ ja fez sua inscrição? Aguarda até o processamento (pode demorar alguns dias), caso tenha algum problema entre em contato.</q-item-label>
               </q-item-section>
             </q-item>
             <q-item clickable v-else v-for="item in charges" :key="item.event_desc.chargeId" @click="openModal(item)" >
