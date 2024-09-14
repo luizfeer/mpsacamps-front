@@ -130,7 +130,7 @@
                   <router-link
 
                     class="bg-purple-600 text-white mt-8 relative block p-4 rounded-md"
-                   to="/inscricao/federa2024"
+                   to="/inscricao/mpsacamps"
                   >
                   Verificar pagamento
                   </router-link>
