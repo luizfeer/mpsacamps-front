@@ -28,38 +28,38 @@
                 <q-item-label>Carregando...</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item clickable v-else-if="charges && charges.length === 0" >
+            <q-item clickable v-else-if="eventos && eventos.length === 0" >
               <q-item-section>
                 <q-item-label>VocÊ ja fez sua inscrição? Aguarda até o processamento (pode demorar alguns dias), caso tenha algum problema entre em contato.</q-item-label>
               </q-item-section>
             </q-item>
-            <q-item clickable v-else v-for="item in charges" :key="item.event_desc.chargeId" @click="openModal(item)" >
+            <q-item clickable v-else v-for="item in eventos" :key="item.event_desc" @click="openModal(item)" >
               <q-item-section avatar>
 
-                  <!-- <q-img src="~assets/federa/federa-site.webp" /> -->
+             <q-img src="~assets/imgs/bgacamps.webp" />
 
               </q-item-section>
               <q-item-section>
-                <q-item-label>{{ item.event_desc.data.event }}</q-item-label>
+                <q-item-label>{{ item.event }}</q-item-label>
                 <q-item-label caption> Status:
-                  <span v-if="item.event_desc.data.status === 'Pago'">
+                  <span v-if="item.status === 'Pago'">
                     <q-icon name="check_circle" color="green" />
-                     {{ item.event_desc.data.status}}
+                     {{ item.status}}
                   </span>
-                  <span v-else-if="item.event_desc.data.status === 'Cancelado'">
+                  <span v-else-if="item.status === 'Cancelado'">
                     <q-icon name="error" color="red" />
-                     {{ item.event_desc.data.status}}
+                     {{ item.status}}
                   </span>
-                  <span v-else-if="item.event_desc.data.status === 'Processando'">
+                  <span v-else-if="item.status === 'Processando'">
                     <q-icon name="hourglass_empty" color="orange" />
-                     {{ item.event_desc.data.status}}
+                     {{ item.status}}
                   </span>
-                  <span v-else-if="item.event_desc.data.status === 'falhou'">
+                  <span v-else-if="item.status === 'falhou'">
                     <q-icon name="error" color="red" />
-                     {{ item.event_desc.data.status}}
+                     {{ item.status}}
                   </span>
                   <span v-else>
-                     {{ item.event_desc.data.status }}
+                     {{ item.status }}
                   </span>
 
                   </q-item-label>
@@ -91,44 +91,44 @@
               </q-bar>
 
               <q-card-section>
-                <div class="text-h6 font-bold mb-3">{{ evento.event_desc.data.event }}</div>
+                <div class="text-h6 font-bold mb-3">{{ evento.event }}</div>
                 <div class="text-h6">Status:
-                  <span v-if="evento.event_desc.data.status === 'Pago'">
+                  <span v-if="evento.status === 'Pago'">
                     <q-icon name="check_circle" color="green" />
-                     {{ evento.event_desc.data.status}}
+                     {{ evento.status}}
                   </span>
-                  <span v-else-if="evento.event_desc.data.status === 'Cancelado'">
+                  <span v-else-if="evento.status === 'Cancelado'">
                     <q-icon name="error" color="red" />
-                     {{ evento.event_desc.data.status}}
+                     {{ evento.status}}
                   </span>
-                  <span v-else-if="evento.event_desc.data.status === 'Processando'">
+                  <span v-else-if="evento.status === 'Processando'">
                     <q-icon name="hourglass_empty" color="orange" />
-                     {{ evento.event_desc.data.status}}
+                     {{ evento.status}}
                   </span>
                   <span v-else-if="evento.status === 'Falhou'">
                     <q-icon name="error" color="red" />
-                     {{ evento.event_desc.data.status}}
+                     {{ evento.status}}
                   </span>
                   <span v-else>
-                     {{ evento.event_desc.data.status }}
+                     {{ evento.status }}
                   </span>
                 </div>
-                <div v-if="evento.event_desc.data.payLink && evento.event_desc.data.meio === 'Cartão' && evento.event_desc.data.status === 'Falhou'">
-                  Motivo da falha: {{ evento.event_desc.data.payLink}}
+                <div v-if="evento.payLink && evento.meio === 'Cartão' && evento.status === 'Falhou'">
+                  Motivo da falha: {{ evento.payLink}}
                 </div>
 
-                <div class="text-base" v-if="evento.event_desc.data.meio === 'credit_card'">Cartão de crédito</div>
-                <div class="text-base" v-if="evento.event_desc.data.meio === 'boleto'">Boleto</div>
-                <div class="text-base" v-if="evento.event_desc.data.meio === 'pix'">Pix</div>
+                <div class="text-base" v-if="evento.meio === 'credit_card'">Cartão de crédito</div>
+                <div class="text-base" v-if="evento.meio === 'boleto'">Boleto</div>
+                <div class="text-base" v-if="evento.meio === 'pix'">Pix</div>
                 <div class="text-base">Valor:
-                  {{ (evento.event_desc.data.amount/100).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }}
+                  {{ (evento.amount/100).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }}
                 </div>
                 <div class="text-base" v-if="user.lote">Lote: {{ user.lote }}</div>
 
                 <div class="text-base">Realizado
                   <!-- {{ formatData(evento) }} -->
                 </div>
-                <span v-if="evento.event_desc.data.status !== 'Pago'">
+                <span v-if="evento.status !== 'Pago'">
 
                   <router-link
 
@@ -141,20 +141,20 @@
                 </span>
 
                   <!-- <a
-                    v-if="evento.event_desc.data.payLink && evento.event_desc.data.meio === 'boleto'"
+                    v-if="evento.payLink && evento.meio === 'boleto'"
                     class="bg-purple-600 text-white mt-8 relative block p-4 rounded-md"
-                    :href="evento.event_desc.data.payLink"
+                    :href="evento.payLink"
                     target="_blank"
                   >
                   Baixar Boleto
                   </a>
                 <div
-                  v-if="evento.event_desc.data.payLink  && evento.event_desc.data.meio === 'pix' && evento.event_desc.data.status === 'Processando'"
+                  v-if="evento.payLink  && evento.meio === 'pix' && evento.status === 'Processando'"
                   class="bg-gray-600 text-white mt-8 relative block p-4 rounded-md"
                 >
                 <p class="text-base">Caso ainda não tenha efetuado o pagamento use o PIX Copia e cola</p>
                   <q-input
-                    v-model="evento.event_desc.data.payLink"
+                    v-model="evento.payLink"
                     outlined
                     dense
                     class="bg-dark text-white"
@@ -163,18 +163,18 @@
                   <q-btn
                     color="blue"
                     label="Copiar"
-                    @click="copyToClipboard(evento.event_desc.data.payLink)"
+                    @click="copyToClipboard(evento.payLink)"
                     class="mt-4"
                   />
                   <br />
 
               </div> -->
 
-              <div v-if="evento.event_desc.data.status === 'Processando' || evento.event_desc.data.status === 'Falhou'"  class="bg-green-700 border border-green-500 text-white px-4 py-3 rounded relative bg-opacity-20 mt-4" role="alert">
+              <div v-if="evento.status === 'Processando' || evento.status === 'Falhou'"  class="bg-green-700 border border-green-500 text-white px-4 py-3 rounded relative bg-opacity-20 mt-4" role="alert">
                   <p class="block ">Caso tenha algum problema com pagamento nos chame no whatsapp.</p>
                   <p class="mt-4">
                     <a class="bg-green-700 text-white w-full py-3 rounded-lg font-semibold text-sm px-4 "
-                    :href="`https://api.whatsapp.com/send?phone=5535999819980&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20meu%20pagamento%0A${evento.event_desc.data.meio}%0AID: ${evento.event_desc.data.chargeId}%0APor: ${user.name}`">
+                    :href="`https://api.whatsapp.com/send?phone=5535999819980&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20meu%20pagamento%0A${evento.meio}%0AID: ${evento.chargeId}%0APor: ${user.name}`">
                       Whatsapp
                     </a>
                   </p>
@@ -188,14 +188,14 @@
               </q-card-section> -->
                <div class="p-6">
 
-                  <ExtratoView  :evento="evento" :user="user" v-if="evento.event_desc.data.status === 'Pago'" />
+                  <ExtratoView  :evento="evento" :user="user" v-if="evento.status === 'Pago'" />
                </div>
-                <div class="text-center p-6 w-full pt-0" v-if="evento.event_desc.data.status === 'Falhou' || (evento.event_desc.data.status === 'Processando' && evento.event_desc.data.meio === 'Boleto') || (evento.event_desc.data.status === 'Processando' && evento.event_desc.data.meio === 'Pix')">
+                <div class="text-center p-6 w-full pt-0" v-if="evento.status === 'Falhou' || (evento.status === 'Processando' && evento.meio === 'Boleto') || (evento.status === 'Processando' && evento.meio === 'Pix')">
                     <router-link class="block bg-green-700 text-white w-full py-3 rounded-lg font-semibold text-sm px-4" to="/pagamento">
                       Refazer o pagamento
                     </router-link>
                 </div>
-                 <div class="bg-red-700 border border-red-500 text-white px-4 py-3 rounded relative bg-opacity-20" role="alert" v-if="evento.event_desc.data.status === 'Falhou' || (evento.event_desc.data.status === 'Processando' && evento.meio === 'Boleto') || (evento.status === 'Processando' && evento.meio === 'Pix')">
+                 <div class="bg-red-700 border border-red-500 text-white px-4 py-3 rounded relative bg-opacity-20" role="alert" v-if="evento.status === 'Falhou' || (evento.status === 'Processando' && evento.meio === 'Boleto') || (evento.status === 'Processando' && evento.meio === 'Pix')">
                     <span class="block sm:inline">Só refaça o pagamento caso você tenha certeza que sua tentativa anterior não deu certo. Pois será criado outra cobrança. </span>
                   </div>
 
@@ -302,7 +302,7 @@ export default defineComponent({
       // interval.value = setInterval(async () => {
       //   await store.getUserContext()
       // }, 2000 * 60)
-      // getEventInfo()
+      getEventInfo('mpsacamps')
       carregandoCharge.value = false
       $q.loading.hide()
     })
@@ -324,7 +324,7 @@ export default defineComponent({
             if (dataPagarme !== 'Processando') {
               setTimeout(() => {
                 getEventInfo()
-              }, 10000)
+              }, 100000)
             }
           } catch (error) {
             console.log(error)
