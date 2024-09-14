@@ -113,7 +113,7 @@
                      {{ evento.status }}
                   </span>
                 </div>
-                <div v-if="evento.payLink && evento.meio === 'Cartão' && evento.status === 'Falhou'">
+                <div v-if="evento.payLink && evento.meio === 'credit_card' && evento.status === 'failed'">
                   Motivo da falha: {{ evento.payLink}}
                 </div>
 
@@ -125,9 +125,6 @@
                 </div>
                 <div class="text-base" v-if="user.lote">Lote: {{ user.lote }}</div>
 
-                <div class="text-base">Realizado
-                  <!-- {{ formatData(evento) }} -->
-                </div>
                 <span v-if="evento.status !== 'Pago'">
 
                   <router-link
