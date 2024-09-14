@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div class="absolute z-[0] w-[50%] h-[50%] right-[0%] top-[40%] purple__gradient"></div>
+  <!-- <div class="absolute z-[0] w-[50%] h-[50%] right-[0%] top-[40%] purple__gradient"></div> -->
 
   <div class="p-1 md:p-2 z-10">
     <div v-if="stepInicial === 'equipe'" >

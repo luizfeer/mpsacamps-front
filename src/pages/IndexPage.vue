@@ -62,17 +62,18 @@
             <Pagination />
         </template>
     </Carousel>
+    <router-link to="/acamps" >
     <div class="mx-auto max-w-[1360px] mt-16 md:px-5 pb-20 md:pb-24 lg:pb-[150px] md:pt-24">
         <div class="relative min-h-[220px] bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${countdownBg})` }">
             <div class="container relative z-10 text-white">
                 <div class="grid grid-cols-12 gap-x-5 gap-y-8 py-7 px-2 md:gap-x-6 lg:gap-y-12 lg:gap-x-7.5 lg:py-11 lg:px-0">
                     <div class="col-span-full md:col-span-5 md:col-start-3 xl:-ml-7.5">
-                        <div class="text-lg font-bold">Abertura</div>
+                        <div class="text-lg font-bold">Já fez sua isncrição?</div>
                         <h3 class="mb-3 text-2xl font-bold leading-none md:text-2.5xl lg:mb-4 lg:text-4xl xl:text-[42px]">
-                            Inscrições MPS Acamps
+                            Inscrições abertas!
                         </h3>
                         <div class="text-base font-medium leading-normal">
-                            As aberturas irão ocorrer no dia 14 de setembro!
+                           Faltam pouco para o MPSAcamps, faça sua inscrição e garanta sua vaga.
                         </div>
                     </div>
 
@@ -113,6 +114,7 @@
 
         </div>
     </div>
+  </router-link>
 
     <section class="pb-20 pt-4 md:pb-24 lg:pb-[130px] lg:pt-6">
       <div class="container">
@@ -163,7 +165,7 @@
           <div class="col-span-2 md:col-span-1 lg:col-span-1">
             <time class="flex flex-col text-center text-xs font-bold md:text-base text-white bg-cyan-800" datetime="2024-04-14">
               <span class="text-2xl lg:text-[32px] md:leading-none h-11 lg:h-[62px] flex items-center justify-center">14</span>
-              <span class="text-white leading-[28px] bg-cyan-950">Abr</span>
+              <span class="text-white leading-[28px] bg-cyan-950">Set</span>
             </time>
           </div>
 
@@ -171,7 +173,7 @@
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
             <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Início das inscrições - Lote inicial</a>
           </h4>
-          <div class="lg:leading-[26px]">As inscrições para o MPS Acamps começam no dia 14 de abril.</div>
+          <div class="lg:leading-[26px]">As inscrições para o MPS Acamps começam no dia 14 de setembro.</div>
         </div>
       </div>
 
@@ -179,7 +181,7 @@
       <div class="grid grid-cols-12 gap-x-4 md:gap-x-6 lg:gap-x-7.5 py-11 first:pt-0 last:pb-0">
         <div class="col-span-2 md:col-span-1 lg:col-span-1">
           <time class="flex flex-col text-center text-xs font-bold md:text-base text-white bg-cyan-800" datetime="2024-10-01">
-            <span class="text-2xl lg:text-[32px] md:leading-none h-11 lg:h-[62px] flex items-center justify-center">01</span>
+            <span class="text-2xl lg:text-[32px] md:leading-none h-11 lg:h-[62px] flex items-center justify-center">26</span>
             <span class="text-white leading-[28px] bg-cyan-950">Out</span>
           </time>
         </div>
@@ -295,7 +297,7 @@ export default defineComponent({
     const hours = ref(0)
     const minutes = ref(0)
     const seconds = ref(0)
-    const targetDate = new Date('2024-09-14T00:00:00').getTime()
+    const targetDate = new Date('2024-11-14T18:00:00').getTime()
     let countdownInterval = null
     const liberado = ref(false)
     const startCountdown = () => {

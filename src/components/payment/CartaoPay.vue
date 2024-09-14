@@ -49,14 +49,19 @@
             <q-select v-model="form.payments.credit_card.installments" emit-value filled color="blue" class="mb-5" dark label="Parcelas" :options="parcelas" option-label="label" option-value="value" />
         <br>
           <span class="text-sm italic">
-            <span>  Valor total: R${{ form.items.amount/100  }}.</span>
+            <span>  Valor total: R${{ parcelas[form.payments.credit_card.installments]?.amount/100 }}.</span>
 
            <br/> As taxas de parcelamento são cobradas pela plataforma de pagamentos.
+           <br/>
+           <b>
+            Para não pagar taxas, escolha a opção de pagamento PIX.
+           </b>
+
           </span>
 
         </div>
     </div>
-    <div class="border border-gray-500 rounded-md mx-1 md:mx-2">
+    <div class="border border-gray-500 rounded-md mx-1 md:mx-2 text-white">
       <p class="p-1 md:p-4 text-lg font-bold">Endereço de cobrança</p>
       <div>
           <q-checkbox v-model="cobranca" label="Usar meu endereço como endereço de cobrança" />
@@ -200,11 +205,7 @@ export default {
           const apiParcelas = response.data
           console.log(apiParcelas)
           ingresso.value = apiParcelas.ingresso
-          const primeraParcela = {
-            label: `1 vez de R$${apiParcelas.ingresso} - sem acrescimos`,
-            value: 1,
-            amount: apiParcelas.ingresso.toFixed(2).toString().replace('.', '')
-          }
+
           form.value.items.amount = apiParcelas.ingresso.toFixed(2).toString().replace('.', '')
 
           apiParcelas.installments = apiParcelas.installments.map((item) => ({
@@ -213,7 +214,6 @@ export default {
             amount: item.total
           }))
           parcelas.value = [
-            { ...primeraParcela },
             ...apiParcelas.installments
           ]
           // parcelas.value.push({ label: `1 vez de R$${amount}.00 - sem acrescimos`, value: 1, amount: amount * 100 })

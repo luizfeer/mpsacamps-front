@@ -11,11 +11,10 @@
         <div class="text-lg text-center text-white">
           <div class="p-6">
           <p class="mb-4">Prezado(a) <span class="font-bold">{{ user.name }}</span>,</p>
-          <p class="mb-4">Gostaríamos de informar que sua inscrição no <span class="font-bold">Federa2024</span> foi registrada com sucesso, mas no momento todas as vagas já foram preenchidas e sua inscrição ficará na lista de espera.</p>
+          <p class="mb-4">Gostaríamos de informar que sua inscrição no <span class="font-bold">MPS2024</span> foi registrada com sucesso, mas no momento todas as vagas já foram preenchidas e sua inscrição ficará na lista de espera.</p>
           <p class="mb-4">Não se preocupe, caso haja alguma desistência ou surgimento de novas vagas, entraremos em contato com você o mais breve possível para confirmar sua inscrição.</p>
           <p class="mb-4">Agradecemos pelo seu interesse e aguardamos a oportunidade de tê-lo(a) conosco neste evento.</p>
           <p class="mt-4">Atenciosamente,</p>
-          <p class="font-bold">Feupam.</p>
         </div>
         </div>
 
@@ -104,8 +103,8 @@
             </q-select>
 
           </div>
-          <div class="p-4 col-12 col-md-6" v-if="user.church === '22. Outra não listada'">
-              <q-input v-model="user.churchText" label="Qual Igreja?" filled label-color="white" dark lazy-rules :rules="user.church === '22. Outra não listada' ? [ val => !!val || 'Igreja é obrigatório' ] : []" />
+          <div class="p-4 col-12 col-md-6" v-if="user.church === 'Outra não listada'">
+              <q-input v-model="user.churchText" label="Qual Igreja?" filled label-color="white" dark lazy-rules :rules="user.church === 'Outra não listada' ? [ val => !!val || 'Igreja é obrigatório' ] : []" />
           </div>
           <!-- <div class="p-4 col-12 col-md-6">
               <q-input v-model="user.pastor" label="Nome do seu Pastor" filled label-color="white" dark lazy-rules :rules="[ val => !!val || 'Pastor é obrigatório' ]" />
@@ -226,7 +225,7 @@ export default {
       () => user.value.church,
       (church) => {
         console.log('church', church)
-        if (church === '22. Outra não listada') {
+        if (church === 'Outra não listada') {
           user.value.churchText = ''
         }
       }
@@ -323,8 +322,8 @@ export default {
       // user.value.ddd = user.value.cellResponsavelJunto.substring(1, 3)
       // user.value.cellphone_responsavel = user.value.cellResponsavelJunto.substring(5, 16)
       // user.value.ddd_responsavel = user.value.cellResponsavelJunto.substring(1, 3)
-      if (user.value.church === '22. Outra não listada') {
-        user.value.church = `22. Outra não listada: ${user.value.churchText}`
+      if (user.value.church === 'Outra não listada') {
+        user.value.church = `Outra não listada: ${user.value.churchText}`
       }
 
       if (userExists.value) {
@@ -601,28 +600,23 @@ export default {
     }
     ])
     const stringOptions = [
-      '1. 2° Igreja Presbiteriana de São Sebastião do Paraíso',
-      '2. Igreja Presbiteriana Bela Vista',
-      '3. Igreja Presbiteriana Betel',
-      '4. Igreja Presbiteriana Betesda',
-      '5. Igreja Presbiteriana Central de Passos',
-      '6. Igreja Presbiteriana Central de São Sebastião do Paraíso',
-      '7. Igreja Presbiteriana Coimbras',
-      '8. Igreja Presbiteriana Concris',
-      '9. Igreja Presbiteriana de Cássia',
-      '10. Igreja Presbiteriana de Furnas',
-      '11. Igreja Presbiteriana de Itaú de Minas',
-      '12. Igreja Presbiteriana de Monte Santo de Minas',
-      '13. Igreja Presbiteriana de São João Batista do Glória',
-      '14. Igreja Presbiteriana do Jardim Itália',
-      '15. Igreja Presbiteriana do Jardim Planalto',
-      '16. Igreja Presbiteriana do Muarama',
-      '17. Igreja Presbiteriana Independente de Alpinópolis',
-      '18. Igreja Presbiteriana Independente de Carmo do Rio Claro',
-      '19. Igreja Presbiteriana Independente de Conceição da Aparecida',
-      '20. Primeira Igreja Batista de Passos',
-      '21. Igreja Católica',
-      '22. Outra não listada'
+      'Passos - IPB',
+      'Machado - IPI ',
+      'Alpinópolis - IPI',
+      'Carmo do Rio Claro - IPI',
+      'Conceição da Aparecida - IPI',
+      'Muzambinho - IPI',
+      'Areado - IPI',
+      'Alterosa - IPI',
+      'Nova Resende - IPI',
+      'Divisa Nova - Batista',
+      'Igreja Católica',
+      'Alfenas - IPI',
+      'Caconde - IPI',
+      'Guaxupé - IPI',
+      'São Sebastião do Paraíso - IPB',
+      'São Bartolomeu - IPI',
+      'Outra não listada'
     ]
     const churchs = ref(stringOptions)
 
