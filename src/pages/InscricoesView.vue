@@ -30,7 +30,7 @@
             </q-item>
             <q-item clickable v-else-if="eventos && eventos.length === 0" >
               <q-item-section>
-                <q-item-label>VocÊ ja fez sua inscrição? Aguarda até o processamento (pode demorar alguns dias), caso tenha algum problema entre em contato.</q-item-label>
+                <q-item-label>Você ja fez sua inscrição? Aguarda até o processamento (pode demorar alguns dias), caso tenha algum problema entre em contato.</q-item-label>
               </q-item-section>
             </q-item>
             <q-item clickable v-else v-for="item in eventos" :key="item.event_desc" @click="openModal(item)" >
@@ -199,6 +199,7 @@
             </q-card>
           </q-dialog>
 
+          <q-item-label>VocÊ ja fez sua inscrição? Aguarda até o processamento (pode demorar alguns dias), caso tenha algum problema entre em contato.</q-item-label>
         </div>
         <!-- <div v-if="user.idade < 18">
           <q-btn

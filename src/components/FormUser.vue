@@ -59,7 +59,7 @@
           </div>
         </div>
         </div>
-        <!-- <div class="col-12 row border border-gray-700 p-1 md:p-2 rounded-md" >
+        <div class="col-12 row border border-gray-700 p-1 md:p-2 rounded-md" >
 
           <div  class="p-4 col-12 col-sm-4">
               <q-input v-model="user.responsavel" label="Nome do Responsável" filled label-color="white" dark lazy-rules :rules="[val => !!val || 'Nome do Responsável é obrigatório' ]" />
@@ -73,7 +73,7 @@
           <q-chip class="bg-gray-500 text-white ml-4 ">
             <q-icon color="white" /> <span class="text-white ml-1"> Sim, o responsável é obrigatório para todos.</span>
           </q-chip>
-        </div> -->
+        </div>
 
         <div class="col-12 row  border border-gray-700 p-1 md:p-2 rounded-md">
           <div class="p-4 col-12 col-md-6">
@@ -307,6 +307,17 @@ export default {
       return true
     }
     const onSubmit = async () => {
+      // verify if user is 13y old
+      if (user.value.idade < 14) {
+        $q.notify({
+          message: 'Você precisa ter 14 anos ou mais para se inscrever',
+          color: 'red-4',
+          textColor: 'white',
+          icon: 'warning',
+          position: 'top'
+        })
+        return
+      }
       console.log('onSubmit', user.value)
       loading.value = true
       const val = validateForm()
