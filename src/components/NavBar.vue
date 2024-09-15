@@ -16,7 +16,7 @@
                 v-for="(nav, index) in navLinks"
                 :to="nav.id"
                 :key="nav.id"
-                class="font-poppins font-normal cursor-pointer group text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] dark:after:bg-current-marker after:origin-left after:scale-x-100"
+                class="font-poppins font-normal cursor-pointer group text-white relative inline-flex items-center gap-x-3 leading-10 px-3.5 xl:px-4.5 after:absolute after:top-[15px] after:left-0 after:bg-current-marker-dark after:transition-transform after:w-1.5 after:h-[9px] after:bg-current-marker after:origin-left after:scale-x-100"
                 :class="`
                     ${active === nav.title ? 'text-white' : 'text-dimWhite'}
                     ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}
@@ -37,7 +37,7 @@
                     <q-img :src="userStorage.user.photoURL" />
                   </q-avatar>
                 </div>
-                <div class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-48 origin-top-right flex-col dark:bg-blue-900 p-3 rounded-md bg-opacity-20 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
+                <div class=" sub-menu hidden absolute hover:opacity-100 hover:flex right-0 z-20  w-48 origin-top-right flex-col p-3 rounded-md bg-opacity-20 text-sm font-bold opacity-0 shadow-2xl transition-all duration-300 group-hover:!flex group-hover:opacity-100">
                   <router-link to="/profile" class="font-poppins font-medium cursor-pointer text-[16px] text-white mb-4">
                   <q-icon name="person" class="mr-2" />
                    {{ userStorage?.user?.displayName }}
@@ -59,7 +59,7 @@
 
               <div v-else class="relative group">
                 <a class="block py-4 px-2 xl:px-3" @click="loginWithGoogle">
-                  <svg role="img" class="h-6 w-6 fill-gray-900 dark:fill-white">
+                  <svg role="img" class="h-6 w-6  fill-white">
                     <use href="~assets/sprite.svg#user"></use>
                   </svg>
                 </a>
@@ -67,10 +67,10 @@
               </div>
 
               <button class="js-menu-toggle -mr-2 inline-flex py-4 px-2 sm:px-3 lg:hidden xl:px-4">
-                <svg role="img" class="js-menu-toggle-icon-open h-6 w-6 fill-gray-900 dark:fill-white">
+                <svg role="img" class="js-menu-toggle-icon-open h-6 w-6  fill-white">
                   <use xlink:href="assets/img/yt1/sprite.svg#menu"></use>
                 </svg>
-                <svg role="img" class="js-menu-toggle-icon-close hidden h-6 w-6 fill-gray-900 dark:fill-white">
+                <svg role="img" class="js-menu-toggle-icon-close hidden h-6 w-6  fill-white">
                   <use xlink:href="assets/img/yt1/sprite.svg#menu-close"></use>
                 </svg>
               </button>
