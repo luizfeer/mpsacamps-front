@@ -307,8 +307,10 @@ export default {
       return true
     }
     const onSubmit = async () => {
-      // verify if user is 13y old
-      if (user.value.idade < 14) {
+      // Verificar se o usuário tem menos de 14 anos, mas ignorar para igrejas específicas
+      if (user.value.idade < 14 &&
+          user.value.church !== 'Areado - IPI' &&
+          user.value.church !== 'Carmo do Rio Claro - IPI') {
         $q.notify({
           message: 'Você precisa ter 14 anos ou mais para se inscrever',
           color: 'red-4',
