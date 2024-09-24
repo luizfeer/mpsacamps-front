@@ -171,7 +171,7 @@
                   <p class="block ">Caso tenha algum problema com pagamento nos chame no whatsapp.</p>
                   <p class="mt-4">
                     <a class="bg-green-700 text-white w-full py-3 rounded-lg font-semibold text-sm px-4 "
-                    :href="`https://api.whatsapp.com/send?phone=5535999819980&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20meu%20pagamento%0A${evento.meio}%0AID: ${evento.chargeId}%0APor: ${user.name}`">
+                    :href="`https://api.whatsapp.com/send?phone=5535999976145&text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20o%20meu%20pagamento%0A${evento.meio}%0AID: ${evento.chargeId}%0APor: ${user.name}`">
                       Whatsapp
                     </a>
                   </p>
