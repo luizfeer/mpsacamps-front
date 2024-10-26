@@ -67,7 +67,13 @@
  <FooterSite />
 
 </q-page>
-
+<q-page v-else class="flex flex-col items-center justify-center px-4 md:mx-auto container z-10 overflow-hidden">
+  <div class="text-center">
+    <h2 class="text-2xl font-bold mb-4">Faça login para comprar as diárias</h2>
+    <p class="mb-6">Você precisa estar logado para visualizar e comprar as diárias do MPSAcamps.</p>
+    <p>Clique no icone de usuario no topo da página para fazer login</p>
+  </div>
+</q-page>
 </template>
 
 <script>
