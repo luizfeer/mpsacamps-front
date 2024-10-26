@@ -8,26 +8,17 @@
         <q-icon name="event_note" class="mr-2" />
                Diárias MPSAcamps
             </h1>
-        <div class="z-30 my-28 font-poppins flex justify-center gap-10 flex-wrap">
+        <div class="z-30 my-28 font-poppins flex justify-center gap-10 w-full">
           <router-link to="/inscricao/dia15" class="carda">
           <q-card class="my-card hover:brightness-150 p-5  bg-slate-600 bg-opacity-10 rounded-xl flex flex-col items-center">
             <!-- <q-img src="~assets/federa/1.webp" class="rounded-lg w-full" /> -->
              <q-card-section class="min-h-[300px]">
                <h2 class="font-bold text-lg">Sexta - 15/11</h2>
-                <p>Checkin - 8:30h</p>
-                <p>Café - 8:45h</p>
-                <p>Culto - 9:30h</p>
-                <p>PG - 11:30h</p>
-                <p>Almoço - 12:15h</p>
-                <p>Esporte e Vangea - 13:30h</p>
-                <p>Banho - 17:00h</p>
-                <p>Jantar - 19:00h</p>
-                <p>Culto - 20:30h</p>
-                <p>Social - 22:00h</p>
-                <p>Checkout - 00:00h</p>
+            <img class="w-fullsm:w-auto" src="~assets/imgs/sexta.webp" alt="">
+
              </q-card-section>
                 <div>
-               <q-btn label="Inscrever" rounded class="py-2 px-6" color="purple" />
+               <q-btn label="Inscrever" rounded class="py-2 px-6" color="teal-10" />
               </div>
           </q-card>
           </router-link>
@@ -35,22 +26,12 @@
           <q-card class="my-card hover:brightness-150 p-5  bg-slate-600 bg-opacity-10 rounded-xl flex flex-col items-center">
             <!-- <q-img src="~assets/federa/3.webp" class="rounded-lg w-full" /> -->
               <q-card-section class="min-h-[300px]">
-                <h2 class="font-bold text-lg">Sábado - 16/11</h2>
-                  <p>Checkin - 8:30h</p>
-                  <p>Café - 8:45h</p>
-                  <p>Culto - 9:30h</p>
-                  <p>PG - 11:30h</p>
-                  <p>Almoço - 13:30h</p>
-                  <p>Esporte - 13:30h</p>
-                  <p>Banho - 17:00h</p>
-                  <p>Jantar - 19:00h</p>
-                  <p>Culto - 20:30h - Encerramento</p>
-                  <p>PG Final - 22:30h</p>
-                  <p>Social - 23:00h</p>
-                  <p>Checkout - 3:00h</p>
+                 <h2 class="font-bold text-lg">Sábado - 16/11</h2>
+
+                <img class="w-full sm:w-auto" src="~assets/imgs/sabado.webp" alt="">
                 </q-card-section>
                  <div>
-               <q-btn label="Inscrever" rounded class="py-2 px-6" color="purple" />
+               <q-btn label="Inscrever" rounded class="py-2 px-6" color="teal-10" />
               </div>
           </q-card>
           </router-link>
@@ -125,9 +106,13 @@ export default defineComponent({
 
 <style scoped>
 .carda {
-  width: 100%;
+
   max-width: 400px;
+
   transition: all 0.3s;
   display: contents;
+}
+.my-card {
+  max-width: 400px;
 }
 </style>
