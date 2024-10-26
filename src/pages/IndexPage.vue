@@ -154,7 +154,7 @@
       <div class="pb-20 md:pb-24 md:mt-32 lg:pb-[120px] mt-11">
       <div class="container">
         <div class="mb-10 md:mb-12 lg:mb-16 xl:mb-20">
-          <h2 class="text-2.5xl font-bold tracking-tighter text-gray-900 before:text-accent before:content-['.'] dark:text-white sm:text-3.5xl md:text-4xl lg:text-[62px] lg:leading-none">
+          <h2 class="text-2.5xl font-bold tracking-tighter  before:text-accent before:content-['.'] text-white sm:text-3.5xl md:text-4xl lg:text-[62px] lg:leading-none">
             Nossa Agenda
           </h2>
         </div>
@@ -171,7 +171,7 @@
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
-            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Início das inscrições - Lote inicial</a>
+            <a class="text-white transition-colors hover:text-accent hover:text-accent" href="#">Início das inscrições - Lote inicial</a>
           </h4>
           <div class="lg:leading-[26px]">As inscrições para o MPS Acamps começam no dia 14 de setembro.</div>
         </div>
@@ -188,7 +188,7 @@
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
-            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Fim do lote de inscrições</a>
+            <a class="text-white transition-colors hover:text-accent hover:text-accent" href="#">Fim do lote de inscrições</a>
           </h4>
           <div class="lg:leading-[26px]">O lote inicial de inscrições termina no dia 1º de outubro.</div>
         </div>
@@ -205,7 +205,7 @@
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
-            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Check-in no Acampamento</a>
+            <a class="text-white transition-colors hover:text-accent hover:text-accent" href="#">Check-in no Acampamento</a>
           </h4>
           <div class="lg:leading-[26px]">O check-in para o MPS Acamps começa às 17h do dia 14 de novembro.</div>
         </div>
@@ -222,7 +222,7 @@
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
-            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Checkout no Acampamento</a>
+            <a class="text-white transition-colors hover:text-accent hover:text-accent" href="#">Checkout no Acampamento</a>
           </h4>
           <div class="lg:leading-[26px]">O checkout do MPS Acamps começa às 9h do dia 17 de novembro.</div>
         </div>
@@ -239,7 +239,7 @@
 
         <div class="col-span-10 md:col-span-6 lg:col-span-6">
           <h4 class="text-xl lg:text-2xl font-bold text-white mb-2 lg:mb-2.5">
-            <a class="text-white transition-colors hover:text-accent dark:hover:text-accent" href="#">Pós Acampa</a>
+            <a class="text-white transition-colors hover:text-accent hover:text-accent" href="#">Pós Acampa</a>
           </h4>
           <div class="lg:leading-[26px]">A data e o local do pós acampa ainda serão confirmados.</div>
         </div>

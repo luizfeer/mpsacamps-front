@@ -21,6 +21,7 @@
                 </div>
                 <div class="pt-5 lg:pt-9 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-7.5 lg:max-w-xl">
                     <router-link to="/inscricao/mpsacamps" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-green-900 hover:bg-green-600/90 flex-1">Fazer inscrição</router-link>
+                    <router-link to="/diarias" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-pink-900 hover:bg-pink-600/90 flex-1">Comprar Diária</router-link>
                     <a :href="googleCalendarLink()" target="_blank" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm bg-blue-900 hover:bg-accent/90 flex-1">Adicionar ao Google Calendar</a>
                 </div>
             </div>

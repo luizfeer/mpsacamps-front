@@ -220,15 +220,15 @@ export default {
       {
         id: '/acamps',
         title: 'Acamps'
-      }
+      },
       // {
       //   id: 'https://api.whatsapp.com/send?phone=5535999819980&text=Ol%C3%A1%2C%20preciso%20de%20ajuda',
       //   title: 'Contato'
       // },
-      // {
-      //   id: '/conferencia',
-      //   title: 'Acampamento'
-      // }
+      {
+        id: '/diarias',
+        title: 'Diárias'
+      }
       // {
       //   id: 'federalíderes',
       //   title: 'Federalideres'

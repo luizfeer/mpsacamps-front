@@ -18,14 +18,14 @@ const routes = [
   //     { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
   //   ]
   // },
-  // {
-  //   path: '/federa-diarias',
-  //   name: 'federa',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [
-  //     { path: '', component: () => import('pages/EventsList.vue') }
-  //   ]
-  // },
+  {
+    path: '/diarias',
+    name: 'diarias',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/EventsList.vue') }
+    ]
+  },
   // {
   //   path: '/tutoria',
   //   name: 'tutoria',
