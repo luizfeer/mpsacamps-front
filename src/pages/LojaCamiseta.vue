@@ -155,7 +155,7 @@ import { useUserStore } from 'stores/user'
 import { useQuasar } from 'quasar'
 // import { useQuasar } from 'quasar'
 import { useRouter } from 'vue-router'
-// import CryptoJS from 'crypto-js'
+import CryptoJS from 'crypto-js'
 
 export default {
   name: 'LojaCamiseta',
@@ -254,12 +254,12 @@ export default {
         // await new Promise(resolve => setTimeout(resolve, 1000))
 
         // Gera o hash do cupom digitado
-        // const cupomHash = CryptoJS.SHA256(cupom.value.toUpperCase()).toString()
-        const cupomHash = cupom.value.toUpperCase()
+        const cupomHash = CryptoJS.SHA256(cupom.value.toUpperCase()).toString()
+        // const cupomHash = cupom.value.toUpperCase()
 
         if (cupomHash === CUPOM_HASH) {
           cupomAplicado.value = true
-          descontoCupom.value = 25 // 10% de desconto
+          descontoCupom.value = 25 
           $q.notify({
             message: 'Cupom aplicado com sucesso!',
             color: 'positive',

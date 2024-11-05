@@ -56,6 +56,9 @@ module.exports = configure(function (/* ctx */) {
         browser: ['es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1'],
         node: 'node16'
       },
+      alias: {
+        'vue3-carousel': 'vue3-carousel/dist/vue3-carousel.esm.js',
+      },
 
       vueRouterMode: 'history' // available values: 'hash', 'history'
       // vueRouterBase,
