@@ -259,7 +259,7 @@ export default {
 
         if (cupomHash === CUPOM_HASH) {
           cupomAplicado.value = true
-          descontoCupom.value = 25 
+          descontoCupom.value = 25
           $q.notify({
             message: 'Cupom aplicado com sucesso!',
             color: 'positive',
