@@ -110,12 +110,17 @@ export default {
     equipe: {
       type: Boolean,
       required: true
+    },
+    produto: {
+      type: Object,
+      required: false
     }
   },
   setup (props, { emit }) {
     // const { equipe } = toRefs(props)
 
     const userStore = useUserStore()
+    const produto = props.produto
     const router = useRouter()
     const $q = useQuasar()
     const { user } = storeToRefs(userStore)
@@ -192,6 +197,7 @@ export default {
     onMounted(async () => {
       id.value = router.currentRoute.value.params.id
       form.value.items.description = id.value
+      if (produto) form.value.items.description = JSON.stringify({ tamanho: produto.tamanho.id, cor: produto.cor.nome, modelo: produto.modelo.id })
 
       const total = form.value.items.amount / 100
       console.log(total)

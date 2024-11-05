@@ -123,7 +123,7 @@
 
                         <button
                         type="button"
-                        class="w-full mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-gray-400 text-sm font-semibold rounded-md"
+                        class="w-full mt-8 px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold rounded-md"
                         @click="adicionarAoCarrinho"
                         :disabled="!corSelecionada || !tamanhoSelecionado"
                         >

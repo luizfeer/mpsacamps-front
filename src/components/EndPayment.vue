@@ -2,14 +2,14 @@
 <!-- pagarme end payment form credit card -->
   <div class="flex flex-col items-center justify-center">
     <template v-if="method === 'cartao'">
-      <CartaoPay :equipe="equipe" @success="sucessoNoPagamento(true)" />
+      <CartaoPay :produto="produto" :equipe="equipe" @success="sucessoNoPagamento(true)" />
 
     </template>
     <template v-else-if="method === 'boleto'">
       <BoletoPay :equipe="equipe" @success="sucessoNoPagamento(true)" />
     </template>
     <template v-else-if="method === 'pix'">
-      <PixPay :equipe="equipe" @success="sucessoNoPagamento(true)" />
+      <PixPay :produto="produto" :equipe="equipe" @success="sucessoNoPagamento(true)" />
       </template>
 </div>
 
@@ -31,6 +31,10 @@ export default {
     method: {
       type: String,
       required: true
+    },
+    produto: {
+      type: Object,
+      required: false
     },
     equipe: {
       type: Boolean,

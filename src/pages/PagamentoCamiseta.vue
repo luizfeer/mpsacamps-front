@@ -109,19 +109,6 @@
         </template>
       </q-stepper>
     </div>
-
-    <div v-else-if="stepInicial === 'iniciada'">
-      <!-- Código existente para pagamento em andamento -->
-      <div class="flex flex-col items-center justify-center">
-        <q-card class="bg-black-gradient" v-if="pagamentoExiste.meio==='pix'">
-          <!-- ... código do PIX ... -->
-        </q-card>
-        <q-card class="bg-black-gradient" v-if="pagamentoExiste.meio==='credit_card'">
-          <!-- ... código do cartão ... -->
-        </q-card>
-      </div>
-    </div>
-
     <div v-else-if="stepInicial === 'sucesso'">
       <div class="flex flex-col items-center justify-center p-4 bg-slate-600 bg-opacity-30 rounded-lg m-2">
         <div class="text-h6">Seu pedido já foi realizado com sucesso!</div>

@@ -55,9 +55,14 @@ export default {
     equipe: {
       type: Boolean,
       required: true
+    },
+    produto: {
+      type: Object,
+      required: false
     }
   },
   setup (props, { emit }) {
+    const produto = props.produto
     const enabled = ref(false)
     // const { equipe } = toRefs(props)
 
@@ -93,6 +98,8 @@ export default {
     onMounted(() => {
       id.value = router.currentRoute.value.params.id
       form.value.items.description = id.value
+      if (produto) form.value.items.description = JSON.stringify({ tamanho: produto.tamanho.id, cor: produto.cor.nome, modelo: produto.modelo.id })
+
       getInstallments()
     })
     const getInstallments = (amount) => {
