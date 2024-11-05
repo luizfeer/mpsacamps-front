@@ -120,19 +120,17 @@ import {
 import {
   ptBR
 } from 'date-fns/locale'
-import 'vue3-carousel/dist/carousel.css'
-import {
-  Carousel,
-  Pagination,
-  Slide
-} from 'vue3-carousel'
+// import {
+//   Carousel,
+//   Pagination,
+//   Slide
+// } from 'vue3-carousel'
+// import 'vue3-carousel/dist/carousel.css'
+
 // import LoginGoogle from 'components/LoginGoogle.vue'
 export default {
   components: {
-    EmojiPicker,
-    Carousel,
-    Pagination,
-    Slide
+    EmojiPicker
     // LoginGoogle
   },
   setup () {

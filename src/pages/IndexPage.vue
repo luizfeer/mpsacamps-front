@@ -2,66 +2,6 @@
 <NavBar />
 
 <q-page class="px-4 md:mx-auto container z-10 font-poppins ">
-
-    <Carousel :autoplay="10000" :wrap-around="true">
-        <Slide v-for="slide in 7" :key="slide">
-            <div class="carousel__item  bg-cover bg-center " v-if="slide===1" :style="{ backgroundImage: `url(${imagem1})`  }" >
-
-             <!-- <div
-                class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left  [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
-                >
-                    <div class="md:-ml-2 xl:-ml-3">
-                        <div class=" text-xl font-bold leading-none tracking-tighter text-white  transition-all">Segue a gente no </div>
-                        <div class="-mt-[0.1em] translate-x-8 text-6xl font-bold leading-none tracking-tighter text-yellow-600">Insta</div>
-                    </div>
-                    <div class="mt-3 md:mt-1 xl:-mt-2.5 lg:pb-9 xl:pb-12">
-                        <div class="mb-7 translate-y-4 text-base font-medium leading-8 text-white ">
-                            Acompanhe nosso intagram para ficar por dentro de todas as novidades!
-                        </div>
-                        <a href="https://www.instagram.com/mpsacamps/" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 md:py-[21px] px-5 lg:px-10 text-white bg-social-twitch hover:bg-social-twitch/90 w-full lg:w-[75%] xl:w-[55%] translate-y-4 ">
-                            Seguir
-
-                        </a>
-                    </div>
-
-                </div> -->
-            </div>
-                <div v-else-if="slide===2" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem2})` }">
-                  <!-- <div class="col-span-10 col-start-2 self-center md:col-span-5 lg:col-start-2 text-center md:text-left bg-cover bg-center [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)]"
-                  >
-                      <div class="px-6 text-center">
-
-                        <div class="mb-1 flex flex-wrap justify-center gap-1 text-accent lg:mb-2 font-bold uppercase">
-                          <div>Nosso canal no youtbe</div>
-                        </div>
-
-                        <h2 class="mb-6 text-4xl font-bold leading-none tracking-tighter sm:text-5xl md:mb-8 md:text-6xl md:leading-none lg:text-7xl lg:mb-12 lg:leading-none text-white xl:text-[74px]">
-                          <a href="_str1-single.html" class="hover:opacity-80 transition-opacity duration-300">
-                            Video de anuncio do MPSAcamps.
-                          </a>
-                        </h2>
-
-                        <a href="#" class="inline-flex text-center font-bold leading-none transition-colors uppercase justify-center gap-x-3 py-4 px-4 md:py-[18px] lg:px-8 text-sm text-white bg-primary hover:bg-primary/90">
-                          Assista o video
-
-                        </a>
-                      </div>
-                    </div> -->
-
-                </div>
-                <div v-else-if="slide===3" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem3})` }"></div>
-                <div v-else-if="slide===4" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem4})` }"></div>
-                <div v-else-if="slide===5" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem5})` }"></div>
-                <div v-else-if="slide===6" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem6})` }"></div>
-                <div v-else-if="slide===7" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem7})` }"></div>
-                <div v-else-if="slide===8" class="carousel__item  bg-cover bg-center" :style="{ backgroundImage: `url(${imagem8})` }"></div>
-
-        </Slide>
-
-        <template #addons>
-            <Pagination />
-        </template>
-    </Carousel>
     <router-link to="/acamps" >
     <div class="mx-auto max-w-[1360px] mt-16 md:px-5 pb-20 md:pb-24 lg:pb-[150px] md:pt-24">
         <div class="relative min-h-[220px] bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${countdownBg})` }">
@@ -262,13 +202,13 @@ import {
   ref,
   onBeforeUnmount
 } from 'vue'
-import {
-  Carousel,
-  Pagination,
-  Slide
-} from 'vue3-carousel'
+// import {
+//   Carousel,
+//   Pagination,
+//   Slide
+// } from 'vue3-carousel'
 import CardsAnimadosVue from 'src/components/CardsAnimados.vue'
-import 'vue3-carousel/dist/carousel.css'
+// import 'vue3-carousel/dist/carousel.css'
 import countdownBg from 'src/assets/countdown-bg.png'
 import imagem1 from 'src/assets/imgs/1.webp'
 import imagem2 from 'src/assets/imgs/2.webp'
@@ -285,9 +225,6 @@ import FooterSite from 'src/components/FooterSite.vue'
 export default defineComponent({
   name: 'IndexPage',
   components: {
-    Carousel,
-    Slide,
-    Pagination,
     NavBar,
     FooterSite,
     CardsAnimadosVue
