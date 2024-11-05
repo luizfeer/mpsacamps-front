@@ -26,14 +26,14 @@ const routes = [
       { path: '', component: () => import('pages/EventsList.vue') }
     ]
   },
-  // {
-  //   path: '/tutoria',
-  //   name: 'tutoria',
-  //   component: () => import('layouts/MainLayout.vue'),
-  //   children: [
-  //     { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
-  //   ]
-  // },
+  {
+    path: '/loja-mps',
+    name: 'loja',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/LojaCamiseta.vue') }
+    ]
+  },
   {
     path: '/acamps',
     name: 'acamps',
@@ -84,13 +84,15 @@ const routes = [
 
   {
     path: '/inscricao/:id/:step?',
+    name: 'inscricao',
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/InscricaoForm.vue') }
     ],
     meta: {
       requiresAuth: true
-    }
+    },
+    props: true
   },
   {
     path: '/atualizar-dados',
@@ -127,6 +129,15 @@ const routes = [
     path: '/usuarios/:evento',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/DataUser.vue') }],
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/pagamento-camiseta/:id/:produto',
+    name: 'pagamento-camiseta',
+    component: () => import('layouts/MainLayout.vue'),
+    children: [{ path: '', component: () => import('pages/PagamentoCamiseta.vue') }],
     meta: {
       requiresAuth: true
     }
