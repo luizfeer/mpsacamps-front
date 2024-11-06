@@ -104,8 +104,8 @@ export default {
     onMounted(() => {
       id.value = router.currentRoute.value.params.id
       form.value.items.description = id.value
+      form.value.items.evento = id.value
       if (produto) {
-        form.value.items.evento = id.value
         form.value.items.description = JSON.stringify({ tamanho: produto.tamanho.id, cor: produto.cor.nome, modelo: produto.modelo.id })
       }
       getInstallments()
