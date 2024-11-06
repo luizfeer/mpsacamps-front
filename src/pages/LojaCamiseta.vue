@@ -133,8 +133,9 @@
                         <div class="mt-8">
                             <h3 class="text-xl font-bold text-gray-400">Sobre sua compra</h3>
                             <ul class="space-y-3 list-disc mt-4 pl-4 text-sm text-gray-400">
+                                <li>Só será possivel comprar uma camiseta por vez.</li>
+                                <li>Se você deseja comprar mais de uma, compre a primeira e nos chame no <a href="https://wa.me/5535999976145" target="_blank" class="text-blue-600">WhatsApp</a> para confirmar a compra da segunda.</li>
                                 <li>As camisetas compradas no site serão entregas no check-in do acampamento.</li>
-                                <li>Se você deseja comprar mais de uma, compre uma de cada vez.</li>
                                 <li>Se atente a tabela de medidas, pois não haverá trocas.</li>
                             </ul>
                         </div>

@@ -13,6 +13,12 @@
     <div v-else class="w-full h-full">
       <q-card class="bg-black-gradient">
         <q-card-section class="text-center">
+          <q-banner class="bg-warning text-black q-mb-md">
+            <template v-slot:avatar>
+              <q-icon name="warning" color="black" />
+            </template>
+            Atenção: O código PIX irá expirar em 30 minutos. Por favor, realize o pagamento dentro deste prazo.
+          </q-banner>
           <q-img :src="pix.qrcodePix" alt="QRCode Pix" style="height: 224px; max-width: 224px;"/>
             <p>{{ (pix.amount/100).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })  }}</p>
             <p class="text-h6 my-2">Faça  o pagamento com o QRCODE ou PIX Copia e Cola</p>
