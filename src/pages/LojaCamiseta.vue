@@ -124,8 +124,8 @@
                         <button
                         type="button"
                         class="w-full mt-8 px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold rounded-md"
-                        @click="adicionarAoCarrinho"
-                        :disabled="!corSelecionada || !tamanhoSelecionado"
+                        @click="verificarSelecoes"
+                        :class="{ 'opacity-50 cursor-not-allowed': !corSelecionada || !tamanhoSelecionado || !modeloSelecionado }"
                         >
                             Comprar por R$ {{ precoFinal }}
                         </button>
@@ -311,6 +311,26 @@ export default {
       })
     }
 
+    const verificarSelecoes = () => {
+      if (!corSelecionada.value || !modeloSelecionado.value || !tamanhoSelecionado.value) {
+        let mensagem = 'Por favor, selecione: '
+        const faltantes = []
+        if (!corSelecionada.value) faltantes.push('cor')
+        if (!modeloSelecionado.value) faltantes.push('modelo')
+        if (!tamanhoSelecionado.value) faltantes.push('tamanho')
+        mensagem += faltantes.join(', ')
+
+        $q.notify({
+          message: mensagem,
+          color: 'warning',
+          position: 'top',
+          timeout: 2000
+        })
+        return
+      }
+      adicionarAoCarrinho()
+    }
+
     return {
       userStorage,
       produto,
@@ -330,7 +350,8 @@ export default {
       verificandoCupom,
       precoFinal,
       aplicarCupom,
-      removerCupom
+      removerCupom,
+      verificarSelecoes
     }
   }
 }
