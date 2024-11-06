@@ -192,7 +192,7 @@ export default {
 
     // Cores disponíveis
     const cores = ref([
-      { id: 1, nome: 'Verde', codigo: '#122021' },
+      { id: 1, nome: 'Verde', codigo: '#00a884' },
       { id: 2, nome: 'Preto', codigo: '#000000' }
 
     ])
