@@ -122,7 +122,7 @@ export default {
     {
       id: '/#contato',
       title: 'Contato'
-    },
+    }
     // {
     //   id: '/acamps',
     //   title: 'Acamps'
