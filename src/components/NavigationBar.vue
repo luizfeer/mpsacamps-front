@@ -123,10 +123,10 @@ export default {
       id: '/#contato',
       title: 'Contato'
     },
-    {
-      id: '/acamps',
-      title: 'Acamps'
-    }
+    // {
+    //   id: '/acamps',
+    //   title: 'Acamps'
+    // }
       // {
       //   id: 'federalíderes',
       //   title: 'Federalideres'

@@ -2,7 +2,7 @@
 <NavBar />
 
 <q-page class="px-4 md:mx-auto container z-10 font-poppins ">
-    <router-link to="/acamps" >
+    <router-link to="/diarias" >
     <div class="mx-auto max-w-[1360px] mt-16 md:px-5 pb-20 md:pb-24 lg:pb-[150px] md:pt-24">
         <div class="relative min-h-[220px] bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${countdownBg})` }">
             <div class="container relative z-10 text-white">
