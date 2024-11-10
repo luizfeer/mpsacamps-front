@@ -228,11 +228,11 @@ export default {
       {
         id: '/diarias',
         title: 'Diárias'
-      },
-      {
-        id: '/loja-mps',
-        title: 'Camisetas'
       }
+      // {
+      //   id: '/loja-mps',
+      //   title: 'Camisetas'
+      // }
       // {
       //   id: 'federalíderes',
       //   title: 'Federalideres'
