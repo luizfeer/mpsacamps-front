@@ -5,6 +5,11 @@ export default defineConfig({
     alias: {
       'vue3-carousel': 'vue3-carousel/dist/carousel.esm.js'
     }
+  },
+  server: {
+    hmr: {
+      overlay: false
+    }
   }
   // ... resto da configuração
 }) 

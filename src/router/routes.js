@@ -2,73 +2,77 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') }]
+    component: () => import('pages/EntreDeuses.vue')
+    // children: [{ path: '', component: () => import('pages/EntreDeuses.vue') }]
   },
   {
-    path: '/profile',
-    name: 'profile',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/ProfileView.vue') }]
-  },
+    path: '/:catchAll(.*)*',
+    component: () => import('pages/EntreDeuses.vue')
+  }
   // {
-  //   path: '/federacamps',
+  //   path: '/profile',
+  //   name: 'profile',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [{ path: '', component: () => import('pages/ProfileView.vue') }]
+  // },
+  // // {
+  // //   path: '/federacamps',
+  // //   component: () => import('layouts/MainLayout.vue'),
+  // //   children: [
+  // //     { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
+  // //   ]
+  // // },
+  // {
+  //   path: '/diarias',
+  //   name: 'diarias',
   //   component: () => import('layouts/MainLayout.vue'),
   //   children: [
-  //     { path: '', component: () => import('pages/ConferenciaFeupam.vue') }
+  //     { path: '', component: () => import('pages/EventsList.vue') }
   //   ]
   // },
-  {
-    path: '/diarias',
-    name: 'diarias',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/EventsList.vue') }
-    ]
-  },
-  {
-    path: '/loja-mps',
-    name: 'loja',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/LojaCamiseta.vue') }
-    ]
-  },
-  {
-    path: '/acamps',
-    name: 'acamps',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/MPSAcamps.vue') }
-    ]
-  },
-  {
-    path: '/politica',
-    name: 'politica',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/PoliticaSeguranca.vue') }
-    ]
-  },
-  {
-    path: '/lista-espera',
-    name: 'listaEspera',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/ListaEspera.vue') }
-    ]
-  },
-  {
-    path: '/eventos',
-    name: 'eventos',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/InscricoesView.vue') }
-    ],
-    meta: {
-      requiresAuth: true
-    }
-  },
+  // {
+  //   path: '/loja-mps',
+  //   name: 'loja',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/LojaCamiseta.vue') }
+  //   ]
+  // },
+  // {
+  //   path: '/acamps',
+  //   name: 'acamps',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/MPSAcamps.vue') }
+  //   ]
+  // },
+  // {
+  //   path: '/politica',
+  //   name: 'politica',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/PoliticaSeguranca.vue') }
+  //   ]
+  // },
+  // {
+  //   path: '/lista-espera',
+  //   name: 'listaEspera',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/ListaEspera.vue') }
+  //   ]
+  // },
+  // {
+  //   path: '/eventos',
+  //   name: 'eventos',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/InscricoesView.vue') }
+  //   ],
+  //   meta: {
+  //     requiresAuth: true
+  //   }
+  // },
 
   // {
   //   path: '/eventos-disponiveis',
@@ -82,42 +86,42 @@ const routes = [
   //   }
   // },
 
-  {
-    path: '/inscricao/:id/:step?',
-    name: 'inscricao',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/InscricaoForm.vue') }
-    ],
-    meta: {
-      requiresAuth: true
-    },
-    props: true
-  },
-  {
-    path: '/atualizar-dados',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/FormDados.vue') }
-    ],
-    meta: {
-      requiresAuth: true
-    }
-  },
+  // {
+  //   path: '/inscricao/:id/:step?',
+  //   name: 'inscricao',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/InscricaoForm.vue') }
+  //   ],
+  //   meta: {
+  //     requiresAuth: true
+  //   },
+  //   props: true
+  // },
+  // {
+  //   path: '/atualizar-dados',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/FormDados.vue') }
+  //   ],
+  //   meta: {
+  //     requiresAuth: true
+  //   }
+  // },
 
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/AuthComponent.vue') }
-    ]
-  },
-  {
-    path: '/termos',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/TermosUso.vue') }]
-  },
+  // {
+  //   path: '/login',
+  //   name: 'login',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [
+  //     { path: '', component: () => import('pages/AuthComponent.vue') }
+  //   ]
+  // },
+  // {
+  //   path: '/termos',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [{ path: '', component: () => import('pages/TermosUso.vue') }]
+  // },
   // {
   //   path: '/pagamento',
   //   component: () => import('layouts/MainLayout.vue'),
@@ -125,29 +129,25 @@ const routes = [
   //     { path: '', component: () => import('pages/SegundoPagamento.vue') }
   //   ]
   // },
-  {
-    path: '/usuarios/:evento',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/DataUser.vue') }],
-    meta: {
-      requiresAuth: true
-    }
-  },
-  {
-    path: '/pagamento-camiseta/:id/:produto',
-    name: 'pagamento-camiseta',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/PagamentoCamiseta.vue') }],
-    meta: {
-      requiresAuth: true
-    }
-  },
+  // {
+  //   path: '/usuarios/:evento',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [{ path: '', component: () => import('pages/DataUser.vue') }],
+  //   meta: {
+  //     requiresAuth: true
+  //   }
+  // },
+  // {
+  //   path: '/pagamento-camiseta/:id/:produto',
+  //   name: 'pagamento-camiseta',
+  //   component: () => import('layouts/MainLayout.vue'),
+  //   children: [{ path: '', component: () => import('pages/PagamentoCamiseta.vue') }],
+  //   meta: {
+  //     requiresAuth: true
+  //   }
+  // },
   // Always leave this as last one,
   // but you can also remove it
-  {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
 ]
 
 export default routes
